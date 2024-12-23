@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <section class="music-section">
+        <h2>Currently Playing</h2>
+        <div class="music-cards">
+            <div class="music-card user1">
+                <h3>You</h3>
+                <form id="musicForm1" class="music-form">
+                    <input type="hidden" name="user" value="user1">
+                    <input type="text" name="song" placeholder="Song name" required>
+                    <input type="text" name="artist" placeholder="Artist" required>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+            <div class="music-card user2">
+                <h3>Partner</h3>
+                <form id="musicForm2" class="music-form">
+                    <input type="hidden" name="user" value="user2">
+                    <input type="text" name="song" placeholder="Song name" required>
+                    <input type="text" name="artist" placeholder="Artist" required>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="dinner-section">
+        <h2>Tonight's Dinner</h2>
+        <form id="dinnerForm">
+            <select name="dinner" required>
+                <option value="">Select dinner...</option>
+                <option value="pizza">Pizza</option>
+                <option value="pasta">Pasta</option>
+                <option value="sushi">Sushi</option>
+                <option value="salad">Salad</option>
+                <option value="surprise">Surprise Me!</option>
+            </select>
+            <button type="submit">Choose</button>
+        </form>
+    </section>
+
+    <section class="mood-section">
+        <h2>Current Mood</h2>
+        <div class="mood-cards">
+            <div class="mood-card user1">
+                <h3>You</h3>
+                <form id="moodForm1" class="mood-form">
+                    <input type="hidden" name="user" value="user1">
+                    <div class="mood-buttons">
+                        <button type="button" data-mood="happy">😊</button>
+                        <button type="button" data-mood="loved">🥰</button>
+                        <button type="button" data-mood="tired">😴</button>
+                        <button type="button" data-mood="sad">😢</button>
+                    </div>
+                </form>
+            </div>
+            <div class="mood-card user2">
+                <h3>Partner</h3>
+                <form id="moodForm2" class="mood-form">
+                    <input type="hidden" name="user" value="user2">
+                    <div class="mood-buttons">
+                        <button type="button" data-mood="happy">😊</button>
+                        <button type="button" data-mood="loved">🥰</button>
+                        <button type="button" data-mood="tired">😴</button>
+                        <button type="button" data-mood="sad">😢</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %} 
